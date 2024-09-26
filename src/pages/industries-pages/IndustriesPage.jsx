@@ -4,6 +4,7 @@ import industries from "./data";
 function IndustriesPage() {
   const [popup, showPopup] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState({});
+  document.title = "Industries - Proximetra";
   return (
     <main className="industries-page">
       {popup ? (
