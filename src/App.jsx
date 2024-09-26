@@ -9,7 +9,7 @@ import CareersPage from "./pages/careers-page/CareersPage";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 
-import NavBar from "./components/NavBar";
+import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 import ProjectsPage from "./pages/projects-page/ProjectsPage";
 import ProjectDetailsPage from "./pages/projects-page/ProjectDetailsPage";
