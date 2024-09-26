@@ -1,0 +1,91 @@
+.projects-page {
+  > h1 {
+    font-size: $font-size-large;
+    text-align: center;
+    margin: 100px 0px 20px 0px;
+    padding: 0px 30px;
+  }
+  > p {
+    width: 80%;
+    margin: auto;
+    min-width: 200px;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 100px;
+
+    b {
+      color: $color-accent;
+    }
+  }
+
+  &__categories {
+    padding: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    row-gap: 50px;
+    margin: clamp(5.625rem, 4.477rem + 4.898vw, 9.375rem);
+  }
+
+  &__project-card {
+    background-color: $color-light-blue;
+    padding: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+
+    &__icon {
+      width: 60px;
+      aspect-ratio: 1 / 1;
+      background-color: $color-text-main;
+      border-radius: 50px;
+      margin-top: -55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: $font-size-h3;
+
+      svg {
+        stroke: white;
+        fill: white;
+      }
+    }
+
+    a {
+      color: $color-accent;
+      font-weight: $font-weight-h3;
+      font-size: $font-size-paragraph;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@media (max-width: 725px) {
+  .projects-page {
+    &__categories {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .projects-page {
+    &__categories {
+      margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 475px) {
+  .projects-page {
+    &__categories {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

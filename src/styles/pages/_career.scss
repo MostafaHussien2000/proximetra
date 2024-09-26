@@ -1,0 +1,43 @@
+.careers-page {
+  > h1 {
+    font-size: $font-size-large;
+    text-align: center;
+    margin-top: 100px;
+    padding: 0px 30px;
+  }
+
+  > center p {
+    margin-bottom: 100px;
+    a {
+      color: $color-accent;
+      font-weight: $font-weight-paragraph-heavy;
+      margin-inline: 5px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__textual {
+    margin-bottom: 30px;
+    padding: 30px;
+
+    h1 {
+      font-size: $font-size-h1;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__testimonials-card {
+    padding: 20px;
+    margin: 15px 0px;
+    background: $color-light-blue;
+    &__content {
+      &__author {
+        text-align: right;
+        opacity: 0.5;
+      }
+    }
+  }
+}

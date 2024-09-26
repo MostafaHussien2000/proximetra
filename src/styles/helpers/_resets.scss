@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+  color: $color-text-main;
+}
+
+*::selection {
+  background: $color-accent;
+  color: $color-white;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: $color-white;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-family: "Old Standard TT", "Times New Roman", Times, serif;
+  font-size: $font-size-h1;
+  font-weight: $font-weight-h1;
+}
+
+p {
+  line-height: 1.6;
+}

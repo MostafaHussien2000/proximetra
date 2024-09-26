@@ -1,0 +1,25 @@
+/* Helpers
+========== */
+@import "./helpers/variables";
+@import "./helpers/resets";
+
+/* Pages
+======== */
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/services";
+@import "./pages/privacy-policy";
+@import "./pages/industries";
+@import "./pages/career";
+@import "./pages/projects";
+@import "./pages/project";
+
+/* UI
+===== */
+@import "./ui/burger-menu";
+@import "./ui/vertical_carousel";
+
+/* Components
+============= */
+@import "./components/navbar";
+@import "./components/footer";

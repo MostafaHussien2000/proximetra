@@ -1,0 +1,18 @@
+@use "./variables";
+
+// Responsive Font Sizes
+@mixin responsive-font($small, $medium, $large, $xlarge) {
+  font-size: $small; // Default size for mobile
+
+  @media (min-width: $breakpoint-sm) {
+    font-size: $medium;
+  }
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $large;
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    font-size: $xlarge;
+  }
+}

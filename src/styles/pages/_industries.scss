@@ -1,0 +1,122 @@
+.industries-page {
+  > h1 {
+    font-size: $font-size-large;
+    text-align: center;
+    margin: 100px 0px 20px 0px;
+    padding: 0px 30px;
+  }
+  > p {
+    width: 80%;
+    margin: auto;
+    min-width: 400px;
+    max-width: 1000px;
+    text-align: center;
+    margin-bottom: 100px;
+
+    b {
+      color: $color-accent;
+    }
+  }
+
+  &__grid {
+    padding: 40px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    &__industry-card {
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        .industries-page__grid__industry-card__content {
+          transform: translateY(0);
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.5) 0%,
+          rgba(0, 0, 0, 0) 50%,
+          rgba(0, 0, 0, 0.5) 100%
+        );
+        z-index: 1;
+      }
+      &__banner {
+        aspect-ratio: 16 / 9;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+      &__content {
+        position: absolute;
+        bottom: 0px;
+        transform: translateY(calc(100% - 40px - 15px));
+        transition: transform 0.3s ease-out;
+        padding: 15px;
+        z-index: 2;
+        h3,
+        p {
+          color: $color-white;
+        }
+        h3 {
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1500;
+  background-color: rgba(0, 0, 0, 0.714);
+
+  &__body {
+    width: 70%;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: white;
+    max-height: 95svh;
+    overflow-y: scroll;
+    > button {
+      border: none;
+      background-color: transparent;
+      font-size: $font-size-h1;
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 1215px) {
+  .industries-page {
+    &__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+@media (max-width: 825px) {
+  .industries-page {
+    &__grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  .popup {
+    &__body {
+      margin: 15px;
+      width: unset;
+    }
+  }
+}
